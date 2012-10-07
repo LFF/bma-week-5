@@ -1,10 +1,13 @@
+import java.sql.Date;
+
 
 public class Assigment {
 
 	/**
 	 * 
-	 * test assigment file after .gitignore add
-	 * 
+	 *  add task class and constructor, parmed and not parmed
+	 *  get element test value of index
+	 *  
 	 * @param args
 	 */
 	public static void main(String[]  args) {
@@ -61,8 +64,31 @@ public class Assigment {
 
 
 
-           class Task {  }
+       class Task { 
+        	   
+        	     String taskDescription;
+        		 Date taskDueDate;
+        		 String taskStatus;
 
-
+        	  
+                                Task (String taskDescription)  {
+                                	
+                                	this.taskDescription = taskDescription;
+                                	
+                                	
+                                	
+                                }
+                                
+                                Task ( )
+ 
+                                {
+                                	
+                                	this.taskDescription = taskDescription;
+                                	
+                                }
+                                
+                                
+        	   
+           }
 
 
