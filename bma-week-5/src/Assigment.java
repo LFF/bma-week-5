@@ -4,12 +4,17 @@ import java.sql.Date;
 public class Assigment {
 
 	/**
-	 * 
+	 *  tryng out the task and string convertion.
 	 *  add task class and constructor, parmed and not parmed
 	 *  get element test value of index
 	 *  
 	 * @param args
 	 */
+	
+		
+	         static Task Task;
+	         
+	         
 	public static void main(String[]  args) {
 		
 			
@@ -21,11 +26,24 @@ public class Assigment {
 			       		
  			
 	         getElement(values, index);
-			
-		
-		
-	}
-	
+	         
+	         
+	        
+	     		Task = new Task ("Task number one to be done");
+	     		
+	     		System.out.println(Task.toString());	     		
+	     		
+	     		
+	     		
+	     		Task = new Task();
+	     			
+	     		System.out.println(Task.toString());	     		
+	     		
+	     			     		
+	     		
+	     	}
+
+	         
 	
 	
 	 static String getElement(String values[]  , int  index) {
@@ -69,6 +87,9 @@ public class Assigment {
         	     String taskDescription;
         		 Date taskDueDate;
         		 String taskStatus;
+        		 
+        		 
+        		 
 
         	  
                                 Task (String taskDescription)  {
@@ -79,7 +100,9 @@ public class Assigment {
                                 	
                                 }
                                 
-                                Task ( )
+                              
+
+								Task ( )
  
                                 {
                                 	
@@ -88,6 +111,18 @@ public class Assigment {
                                 }
                                 
                                 
+								
+								public String toString() {
+									
+									return "Task - Description: " + taskDescription ;
+								
+								}	
+								
+								
+								
+								
+								
+								
         	   
            }
 
