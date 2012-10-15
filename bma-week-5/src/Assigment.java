@@ -4,9 +4,7 @@ import java.sql.Date;
 public class Assigment {
 
 	/**
-	 *  tryng out the task and string convertion.
-	 *  add task class and constructor, parmed and not parmed
-	 *  get element test value of index
+	 * 
 	 *  
 	 * @param args
 	 */
@@ -15,29 +13,38 @@ public class Assigment {
 	         static Task Task;
 	         
 	         
+	         
+	         
+	         public static String values[] = {"task a", "task b", "task c", "task d", "task e"};
+	         
+	         
+	         public static String status [] = {"planned", "dated", "current", "finished"};
+	         
+	        
+	         
+	         
+	         
+	         
+	         
 	public static void main(String[]  args) {
 		
 			
-		 
-		   int  index  =   0;
-		      
-			
-			  String  values []  = {"a", "b", "c", "d", "e"};
-			       		
- 			
-	         getElement(values, index);
-	         
-	         
+		   String  stringindex =  args[1];
+		   
+		   Integer indx = Integer.valueOf(stringindex);
+			     			
+		   
 	        
-	     		Task = new Task ("Task number one to be done");
-	     		
-	     		System.out.println(Task.toString());	     		
+	  	Task = new Task (getElement(values, indx));
 	     		
 	     		
+	    System.out.println(Task.toString());	
 	     		
-	     		Task = new Task();
-	     			
-	     		System.out.println(Task.toString());	     		
+	     		
+	     Task aTask = new Task(getElement(values, indx), status[indx + 1]);
+	     
+	     			     			     		
+	    System.out.println(aTask.toString());	     		
 	     		
 	     			     		
 	     		
@@ -62,13 +69,9 @@ public class Assigment {
 		  else
 			  
 		  {
-		  
-		           
 		       	System.out.println("valid index"  + index);
-		           
 		
 		    return values[index];
-		 
 		 
 				
 			}
@@ -88,38 +91,46 @@ public class Assigment {
         		 Date taskDueDate;
         		 String taskStatus;
         		 
-        		 
-        		 
-
-        	  
-                                Task (String taskDescription)  {
-                                	
-                                	this.taskDescription = taskDescription;
-                                	
-                                	
-                                	
-                                }
-                                
-                              
 
 								Task ( )
  
                                 {
                                 	
-                                	this.taskDescription = taskDescription;
-                                	
+									 taskDescription="";
+									 taskStatus="";	
+									
+									
                                 }
                                 
-                                
 								
-								public String toString() {
-									
-									return "Task - Description: " + taskDescription ;
+							     Task (String taskDescription)  {
+	                                	
+	                                	this.taskDescription = taskDescription;
+	                                	taskStatus="";	
+										
+	                                	
+	                                }
+							     
+							     
+							     Task (String taskDescription, String taskStatus)  {
+	                                	
+	                                	this.taskDescription = taskDescription;
+	                                	this.taskStatus = taskStatus;
+	                                	
+	                                	
+	                                	
+	                                	
+	                                }
+							     
+							     
+					     
+							     
+	                    		
+				public String toString() {
+						
+				return "Task - Description: " + taskDescription + "  " + taskStatus;
 								
-								}	
-								
-								
-								
+				}	
 								
 								
 								
